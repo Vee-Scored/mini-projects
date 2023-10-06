@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="../dist/output.css" />
+
+    <style>
+      * {
+        user-select: none;
+        box-sizing: border-box;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div id="app" class="w-96 p-7 mx-auto rounded-md">
+        <h1 class="font-bold text-2xl mb-5">List Builder</h1>
+
+        <div class="flex border-2 mb-10 border-black">
+          <input
+            id="textInput"
+            class="flex-grow focus-visible:outline-none px-3"
+            type="text"
+          />
+          <button id="addBtn" class="bg-black py-2 px-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="white"
+              class="w-6 h-6"
+            >
+              <path
+                fill="#fff"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 4.5v15m7.5-7.5h-15"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="flex justify-between mb-3 items-center">
+          <div>
+            <h3 class="font-semibold text-xl">Your List</h3>
+          </div>
+          <div class="px-3 py-1 bg-black text-white rounded-full text-sm">
+            Done (<span id="doneCounter">0/</span>
+            <span id="listCounter">0</span>)
+          </div>
+        </div>
+
+        <div id="taskLists">
+          <div class="hidden last:flex flex-col items-center justify-center">
+            <img class="w-36" src="../images/emptySheet.svg" alt="" />
+            <p class="text-stone-500 mt-3 text-sm">There is no list</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./todoApp.js"></script>
+  </body>
+</html>
