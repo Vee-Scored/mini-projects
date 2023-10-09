@@ -110,4 +110,9 @@ document.addEventListener("DOMContentLoaded", () => {
   //listener
 
   addBtn.addEventListener("click", btnHandler);
+  textInput.addEventListener('keyup',(event)=>{
+    if (event.key === 'Enter') {
+      btnHandler()
+    }
+  })
 });
